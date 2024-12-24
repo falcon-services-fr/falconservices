@@ -18,9 +18,18 @@
             <div class="logo-container">
                 <img src="./image/logo_fs.png" alt="Logo" class="logo">
             </div>
-        </nav>        
+            <!-- Icône de menu mobile -->
+            <button class="menu-icon" onclick="toggleMenu()">☰</button>
+            <div class="navbar-links">
+                <ul class="nav-links">
+                    <li><a href="#about">Qui sommes-nous ?</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#realisations">Réalisations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>                    
          
-
         <!---
         <a href="site.html">
             <img src="https://res.cloudinary.com/djv7bh1ea/image/upload/v1733676992/Flag_of_France_os1rsv.png" alt="Français" class="flag">
@@ -45,8 +54,9 @@
         </div>
     </div>    
     
+    <p><section id="about"></section></p>
     <main>
-        <section id="about" class="section dynamic-section">
+        <section class="section dynamic-section">
             <h2>QUI SOMMES-NOUS ?</h2>
             <div class="about-content">
                 <div class="about-text">
@@ -71,7 +81,6 @@
                 </div>
             </div>
         </section>
-        
 
         <section id="services">
             <div class="container">
@@ -348,6 +357,12 @@
                 });
             });
         });
+
+        function toggleMenu() {
+            var menu = document.querySelector('.nav-links');
+            menu.classList.toggle('active');
+        }
+
 
 
     </script>

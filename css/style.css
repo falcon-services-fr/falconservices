@@ -534,7 +534,7 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 12,5%;
     background-color: rgba(0, 0, 0, 0.3); 
     display: flex;
     justify-content: space-between;
@@ -560,6 +560,45 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     justify-content: flex-end;
     align-items: center;
 }
+
+/* Menu burger */
+.burger-menu {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* Afficher le menu burger en mode mobile 
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; 
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+}*/
 
 .nav-links {
     list-style: none;
@@ -587,17 +626,6 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     background-color: #16a085;
 }
 
-/* Styles pour le menu burger */
-.burger-menu {
-    display: none;
-    font-size: 2em;
-    color: white;
-    cursor: pointer;
-    position: absolute; /* Permet un placement précis */
-    top: 15px;
-    right: 15px; /* Ajustez cette valeur pour le rendre bien visible */
-    z-index: 1001; /* Pour être au-dessus des autres éléments */
-}
 
 .container {
     padding-right: 20px; /* Laisse un espace pour l'icône */

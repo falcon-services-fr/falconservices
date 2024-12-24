@@ -21,7 +21,7 @@
         }
 
         header h1 {
-            font-size: 3em;
+            font-size: 2.5em;
         }
 
         p {
@@ -31,7 +31,7 @@
         }
 
         .projects {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 20px auto;
             padding: 0 10px;
         }
@@ -44,13 +44,14 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            flex-wrap: wrap; /* Permet d'ajuster la disposition sur mobile */
         }
 
         .project img {
             width: 200px;
             height: 200px;
             object-fit: cover;
-            border-right: 2px solid #ddd;
+            border-right: none; /* Retirer la bordure sur mobile */
         }
 
         .project-details {
@@ -62,7 +63,7 @@
         }
 
         .project-details h3 {
-            font-size: 1.5em;
+            font-size: 1.4em;
             margin: 0;
             align-items: center;
             color: #2c3e50;
@@ -85,8 +86,8 @@
         }
 
         .project-details a img {
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             object-fit: contain;
             margin-left: 10px;
         }
@@ -118,8 +119,8 @@
             fill: currentColor;
         }
 
-         /* Style for the floating contact button */
-         .floating-contact-btn {
+        /* Style pour le bouton de contact flottant */
+        .floating-contact-btn {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -137,6 +138,77 @@
             background-color: #16a085;
             transform: scale(1.1);
         }
+
+        /* Media Queries pour les écrans plus petits (mobile) */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .projects {
+                padding: 0 10px;
+            }
+
+            .project {
+                flex-direction: column; /* Change la disposition des projets en colonne sur mobile */
+            }
+
+            .project img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .project-details {
+                padding: 10px;
+            }
+
+            .project-details h3 {
+                font-size: 1.3em;
+            }
+
+            .project-details p {
+                font-size: 0.9em;
+            }
+
+            .floating-contact-btn {
+                bottom: 15px;
+                right: 15px;
+                padding: 8px 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .projects {
+                margin: 10px;
+                padding: 0 5px;
+            }
+
+            .project img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .project-details h3 {
+                font-size: 1.2em;
+            }
+
+            .project-details p {
+                font-size: 0.9em;
+            }
+
+            .floating-contact-btn {
+                padding: 8px 15px;
+            }
+        }
+
 
     </style>
 </head>

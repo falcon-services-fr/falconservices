@@ -1,0 +1,744 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Aligne verticalement */
+    justify-content: center; /* Centrage horizontal */
+    height: 100%; /* Assurez-vous que l'élément parent a une hauteur définie */
+    width: 100%; /* Occupe toute la largeur de l'élément parent */
+}
+
+.logo-container img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background: url('../image/background.jpg');
+    background-size: cover;
+    background-color: #2c3e50;
+    margin: 0; /* Ensure no margin on the hero section */
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.typewriter {
+    font-size: 60px;
+    display: inline-block; /* Maintient une largeur flexible */
+    height: 1.5em; /* Fixe une hauteur basée sur la taille de la police */
+    overflow: hidden; /* Empêche tout débordement pendant l'effacement */
+    vertical-align: top; /* Maintient l'alignement avec le texte environnant */
+}
+
+
+.fixed-text {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color:white;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #1abc9c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #16a085;
+    transform: scale(1.1);
+}
+
+main {
+    padding: 80px 20px 20px;
+}
+
+/*.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+/*.section:hover {
+    transform: translateY(-10px);
+}*/
+
+.section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.service-icon {
+    width: 50px; /* Taille uniforme des icônes */
+    height: 50px; /* Taille uniforme des icônes */
+    margin-right: 10px; /* Espacement à droite */
+    object-fit: contain; /* Assure que l'image s'adapte bien sans déformation */
+    display: inline-block; /* Maintient l'alignement */
+}
+
+.service-header {
+    display: flex; /* Permet d'aligner les éléments horizontalement */
+    align-items: center; /* Aligne verticalement l'icône et le texte */
+    justify-content: flex-start; /* Garde l'icône et le texte alignés à gauche */
+}
+
+
+footer {
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.logo-marquee {
+    display: flex;
+    overflow: hidden; /* Défilement sur tout l'écran */
+    background-color: #fff;
+    padding: 20px 0;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo-marquee div {
+    display: flex;
+    animation: marquee 20s linear infinite;
+}
+
+.logo-marquee img {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.contact-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1001;
+}
+
+.contact-btn:hover {
+    background-color: #16a085;
+    transform: scale(1.1);
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Structure de la carte (réduite au début) */
+.service-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, max-height 0.3s ease;
+    cursor: pointer; /* Ajoute un curseur de pointeur pour indiquer que c'est cliquable */
+    max-height: 120px; /* Hauteur initiale réduite */
+    overflow: hidden; /* Cache tout le contenu qui dépasse */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* La carte s'ouvre avec le contenu supplémentaire */
+.service-card.open {
+    max-height: 800px; /* Une valeur suffisamment grande pour afficher tout le contenu */
+}
+
+/* Masquer le contenu supplémentaire lorsqu'on est en mode fermé */
+.service-card p, .button-container {
+    display: none; /* Cache les paragraphes et le bouton lorsque la carte est fermée */
+}
+
+/* Afficher les paragraphes et le bouton lorsque la carte est ouverte */
+.service-card.open p, .service-card.open .button-container {
+    display: block; /* Affiche les paragraphes et le bouton lorsque la carte est ouverte */
+}
+
+/* Section avec le logo et le titre */
+.service-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Logo de la carte */
+.service-header img {
+    max-width: 50px; /* Taille du logo réduite */
+    margin-bottom: 10px; /* Espace entre l'image et le titre */
+}
+
+.service-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Animation pour la carte au survol */
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Contact Section */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-button-container {
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-details h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Style for the floating contact button */
+.floating-contact-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1001;
+}
+
+.floating-contact-btn:hover {
+    background-color: #16a085;
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact-section {
+    
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-button-container {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+.contact-btn-rea {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #2407ca;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-btn-rea:hover {
+    background-color:  #2407ca;
+    transform: scale(1.1);
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #1abc9c;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    margin-left: 50px;
+}
+
+.contact-btn:hover {
+    background-color: #16a085;
+    transform: scale(1.1);
+}
+
+.contact-btn:hover {
+    background-color: #16a085;
+    transform: scale(1.1);
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-details h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.contact-section::before {
+    content: "";
+    background: url('path_to_your_graphics_image.png') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+/* Stats Section */
+.stats-section {
+text-align: center;
+background-color: #ecf0f1;
+padding: 40px;
+margin-bottom: 30px;
+margin-top: 30px;
+border-radius: 50px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.stat {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #002244;
+}
+
+.number {
+    display: block;
+    font-size: 2em;
+    color: #002244;
+}
+
+.divider {
+    width: 2px;
+    height: 50px;
+    background-color: #002244;
+}
+
+/* About us section */
+.dynamic-section {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.dynamic-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    position: relative;
+    z-index: 2; /* Pour superposer le titre à l'ellipse */
+}
+
+.title-container {
+    position: relative;
+    display: inline-block; /* Pour ajuster la largeur à celle du texte */
+}
+
+.title-underline {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px); /* Ajuster la position de l'ellipse */
+    z-index: 1; /* Derrière le texte */
+    width: 100%; /* Ajuster à la largeur de la div */
+    height: auto;
+}
+
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animated-text {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+    animation: slideIn 1s ease-in-out;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icon {
+    font-size: 3em;
+    margin: 0 15px;
+    color: #1abc9c;
+    transition: transform 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    color: #16a085;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Style pour la navbar fixe */
+.navbar-fixed {
+    position: fixed;
+    background-color: rgba(74, 74, 74, 0.9); /* Couleur plus transparente */
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    top: 10px;
+    right: 10px;
+    transform: translateX(100%); /* Position hors écran à droite */
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Masquer par défaut */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Animation fluide */
+}
+
+/* Apparence de la navbar visible */
+.navbar-fixed.visible {
+    transform: translateX(0); /* Glisser dans l'écran */
+    opacity: 1;
+}
+
+/* Bouton pour afficher/masquer la navbar */
+.navbar-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(74, 74, 74, 0.9); /* Couleur plus transparente */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.navbar-toggle:hover {
+    background-color: rgba(22, 160, 133, 0.9); /* Effet de survol plus doux */
+}
+
+/* Liens de navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Liens empilés */
+    gap: 10px;
+    margin: 0;
+    padding: 10px;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    background-color: rgba(74, 74, 74, 0.7); /* Lien légèrement transparent */
+}
+
+.nav-links a:hover {
+    background-color: rgba(22, 160, 133, 0.9);
+}
+
+.nav-links .active a {
+    background-color: rgba(40, 167, 69, 0.9);
+}
+
+
+#realisations{
+    background: url('../image/backgroundrea.png');
+    background-size: cover; /* Couvre toute la section */
+    padding: 60px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+}
+
+#realisations h2 {
+    font-size: 3em; /* Augmente la taille du titre */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#realisations p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.flag {
+    width: 20px; /* Largeur réduite pour un petit logo */
+    height: auto; /* Conserve le ratio de l'image */
+    border-radius: 3px; /* Coins légèrement arrondis, facultatif */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre subtile pour un meilleur rendu */
+    margin-left: 10px; /* Espacement par rapport au texte précédent */
+    transition: transform 0.2s ease; /* Animation au survol */
+}
+
+/* Effet au survol */
+.flag:hover {
+    transform: scale(1.1); /* Légère augmentation de taille au survol */
+}
+
+/* Container du bouton */
+.button-container {
+    margin-top: auto;
+    display: none; /* Cache le bouton au départ */
+}
+
+/* Affiche le bouton seulement quand la carte est ouverte */
+.service-card.open .button-container {
+    display: block;
+}
+
+/* Style du bouton */
+.start-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.start-button:active {
+    background-color: #004085;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+.typewriter::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 0.5s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.icon-card i {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.icon-card p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.cta-container {
+    text-align: center; /* Centrer le texte */
+    position: relative; /* Position relative pour les SVG */
+}
+
+h2 {
+    font-size: 1.8em; /* Ajustez la taille selon vos besoins */
+    font-weight: bold; /* Rendre le texte plus visible */
+    color: #2c3e50; /* Couleur du texte */
+    margin-bottom: 0; /* Supprimez l'espacement sous le titre */
+}
+
+.wave-underline {
+    display: block;
+    margin: 0 auto;
+    width: 80%; /* Ajustez la largeur de la vague */
+    height: 20px; /* Ajustez la hauteur de la vague */
+}
+
+
+
+

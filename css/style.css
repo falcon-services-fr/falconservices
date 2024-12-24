@@ -711,6 +711,129 @@ h2 {
     height: 20px; /* Ajustez la hauteur de la vague */
 }
 
+/* Ajout des media queries pour la responsivité */
+@media (max-width: 1200px) {
+    .stats-container {
+        gap: 20px;
+    }
+    
+    .contact-btn, .contact-btn-rea {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-fixed {
+        width: 95%;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .typewriter {
+        font-size: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .stats-container {
+        flex-direction: column;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .divider {
+        width: 100px;
+        height: 2px;
+        margin: 15px 0;
+    }
+
+    .contact-button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .contact-btn, .contact-btn-rea {
+        margin: 5px 0;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .logo-marquee div {
+        animation: marquee 15s linear infinite;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        width: 90%;
+    }
+
+    .typewriter {
+        font-size: 32px;
+    }
+
+    .fixed-text {
+        font-size: 1.2em;
+    }
+
+    .service-card {
+        padding: 15px;
+        margin: 10px 5px;
+    }
+
+    .service-header img {
+        max-width: 40px;
+    }
+
+    .stats-container {
+        padding: 10px;
+    }
+
+    .contact-btn, .contact-btn-rea {
+        font-size: 1em;
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    .logo-marquee img {
+        width: 70px;
+    }
+
+    #realisations {
+        padding: 30px 15px;
+    }
+
+    #realisations h2 {
+        font-size: 2em;
+    }
+}
+
+/* Optimisations tactiles pour mobile */
+@media (hover: none) {
+    .service-card:hover,
+    .contact-btn:hover,
+    .contact-btn-rea:hover,
+    .btn:hover {
+        transform: none;
+    }
+}
+
 
 
 

@@ -655,7 +655,7 @@ strong {
   color: var(--primary-color);
 }
 
-.dropdown-menu {
+.dropdown-menu { /*Menu sous le Services*/
   background: var(--white-color);
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
   border: 0;
@@ -680,7 +680,7 @@ strong {
   left: 10px;
 }
 
-.dropdown-item {
+.dropdown-item { /*Menu sous le Services*/
   display: inline-block;
   color: var(--p-bg-color);
   font-size: var(--menu-font-size);
@@ -688,17 +688,18 @@ strong {
   position: relative;
   padding-top: 0;
   padding-bottom: 7px;
+  
 }
 
 .dropdown-item.active, 
 .dropdown-item:active,
 .dropdown-item:focus, 
-.dropdown-item:hover {
+.dropdown-item:hover { /*Menu sous le Services --> quand on passe avec le curseur*/
   background: transparent;
   color: var(--primary-color);
 }
 
-.dropdown-toggle::after {
+.dropdown-toggle::after { /*Flèche du Services*/
   content: "\f282";
   display: inline-block;
   font-family: bootstrap-icons !important;
@@ -716,7 +717,7 @@ strong {
   border: 0;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 760px) {
   .dropdown:hover .dropdown-menu {
     opacity: 1;
     margin-top: 0;
@@ -1019,6 +1020,7 @@ strong {
   border-radius: var(--border-radius-small);
   position: relative;
   overflow: hidden;
+  width: 70%;
 }
 
 .services-image-wrap:hover .services-image-hover {
@@ -1479,17 +1481,19 @@ strong {
 /*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
+/* Styles généraux pour les écrans larges (1600px et plus) */
 @media screen and (min-width: 1600px) {
   .intro-section {
     padding-top: 0;
   }
 
   .services-image-wrap {
-    width: 70%; /* Taille par défaut pour écrans larges */
+    width: 50%; /* Taille par défaut pour écrans larges */
     height: auto;
   }
 }
 
+/* Styles pour les écrans de taille moyenne (991px et moins) */
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 42px;
@@ -1524,58 +1528,6 @@ strong {
     padding-bottom: 80px;
   }
 
-  .navbar {
-    background-color: transparent;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-  .navbar-brand,
-  .navbar-brand:hover {
-    color: var(--primary-color);
-  }
-
-  .navbar-nav .nav-link {
-    color: var(--p-color);
-  }
-
-  .navbar-expand-lg .navbar-nav {
-    padding-bottom: 30px;
-  }
-
-  .navbar-expand-lg .navbar-nav .nav-link {
-    margin: 8px 20px;
-  }
-
-  .navbar-expand-lg .navbar-nav .nav-link.custom-btn {
-    background-color: var(--custom-btn-bg-color);
-    color: var(--white-color);
-    margin-left: 0;
-  }
-
-  .navbar-nav .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
-    backdrop-filter: blur(5px); /* Effet de flou */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
-    transition: all 0.3s ease;
-    z-index: 1000; /* Assurez-vous qu'il apparaît au-dessus */
-  }
-
-  .navbar-nav .dropdown-menu.show {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .navbar-nav .dropdown-menu {
-    opacity: 0;
-    visibility: hidden;
-  }
-
   .custom-block-wrap .custom-block {
     right: 12px;
   }
@@ -1599,11 +1551,12 @@ strong {
   }
 
   .services-image-wrap {
-    width: 60%; /* Réduction à 80% pour écrans moyens */
+    width: 40%; /* Réduction à 60% pour écrans moyens */
     margin: auto; /* Centrer les images si nécessaire */
   }
 }
 
+/* Styles pour les petits écrans (767px et moins) */
 @media screen and (max-width: 767px) {
   .custom-btn {
     font-size: 14px;
@@ -1626,11 +1579,56 @@ strong {
   }
 
   .services-image-wrap {
-    width: 30%; /* Réduction à 70% pour petits écrans */
+    width: 30%; /* Réduction à 30% pour petits écrans */
     margin: auto;
+  }
+
+  .navbar-nav{
+    background-color: rgba(100, 100, 101, 0.712); /* Fond transparent mais opaque */
+    backdrop-filter: blur(5px); /* Si vous voulez un effet flou derrière le menu (optionnel) */
+  }
+  
+  /* Styles pour le dropdown sur mobile */
+  .navbar-nav .dropdown-menu {
+    background-color: rgba(100, 100, 101, 0.904);
+    color: white; /* Texte blanc */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 100%; /* Placer juste en dessous du lien */
+    right: 0; /* Aligné à droite */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%); /* Commence à droite, caché */
+  }
+
+  .navbar-nav .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* L'élément glisse vers la gauche */
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item {
+    color: white; /* Texte des items en blanc */
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: var(--primary-color); /* Changer la couleur du fond au survol */
+    color: white;
+  }
+
+  /* Lien d'activation du dropdown */
+  .navbar-nav .dropdown-toggle {
+    color: var(--p-color);
   }
 }
 
+
+/* Styles pour les très petits écrans (480px et moins) */
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 40px;
@@ -1653,11 +1651,10 @@ strong {
   }
 
   .services-image-wrap {
-    width: 30%; /* Réduction à 60% pour très petits écrans */
+    width: 20%; /* Réduction à 30% pour très petits écrans */
     margin: auto;
   }
 }
-
 
 
 .custom-btn.learnmore {
@@ -1710,5 +1707,11 @@ strong {
   opacity: 0.7; /* Légèrement transparent pour un effet plus subtil */
 }
 
-
-
+.realisations-section {
+  position: relative;
+  padding: 80px 20px;
+  background-image: url('https://via.placeholder.com/1920x1080'); /* Remplacez par l'URL de votre image */
+  background-size: cover; /* L'image couvre toute la section */
+  background-position: center; /* Centrage de l'image */
+  color: #fff; /* Couleur du texte */
+}

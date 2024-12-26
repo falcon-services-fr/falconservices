@@ -1333,9 +1333,11 @@ strong {
 /*---------------------------------------
   SITE FOOTER              
 -----------------------------------------*/
+/* Modifications pour le footer */
 .site-footer {
   background-color: var(--primary-color);
   padding-top: 50px;
+  padding-bottom: 30px; /* Un peu de padding en bas */
 }
 
 .site-footer-bottom {
@@ -1364,47 +1366,59 @@ strong {
 .copyright-text {
   color: var(--section-bg-color);
   font-size: var(--copyright-font-size);
-  margin-right: 30px;
 }
 
+/* Bouton "Je souhaite commencer" */
 .site-footer .custom-btn {
   font-size: var(--copyright-font-size);
+  padding: 12px 30px; /* Ajout de padding pour rendre le bouton plus grand */
+  background-color: #4f83d1; /* Fond rouge */
+  color: white; /* Texte blanc */
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid white; /* Contours blancs */
+  border-radius: var(--border-radius-medium); /* Coins arrondis */
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Effet de survol du bouton */
 .site-footer .custom-btn:hover {
-  background: var(--primary-color);
+  background-color: #7cb8eb; /* Changer la couleur de fond en rouge foncé au survol */
+  color: white; /* Rester avec le texte blanc */
+  border-color: white; /* Garder les contours blancs */
 }
 
-.site-footer-bottom a {
-	color: var(--white-color);
+/* Optionnel : Ajout de l'effet de focus pour le bouton */
+.site-footer .custom-btn:focus {
+  outline: none; /* Supprime le contour par défaut du focus */
+  box-shadow: 0 0 10px white; /* Ombre autour du bouton lorsqu'il est focus */
 }
 
-.site-footer-bottom a:hover {
-	color: var(--link-hover-color);
-}
 
-
-/*---------------------------------------
-  FOOTER MENU               
------------------------------------------*/
-.footer-menu {
-  column-count: 2;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-menu-item {
-  list-style: none;
-  display: block;
-}
-
-.footer-menu-link {
-  font-size: var(--p-font-size);
+/* Styles pour les nouveaux liens en bas */
+.footer-links {
+  font-size: 14px;  /* Taille de police plus petite */
   color: var(--white-color);
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 20px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--link-hover-color);
+}
+
+.site-footer-bottom .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 
@@ -1477,9 +1491,39 @@ strong {
   transform: translate3d(0,100%,0);
 }
 
+/* Slogan qui défile */
+.normal-text {
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.cd-words-wrapper {
+  display: inline-block;            /* Maintient le comportement en ligne tout en permettant de transformer */
+  font-weight: bold;                /* Enlever le gras si nécessaire */
+  margin-left: 0%;                  /* Centre le texte */
+  transform: translateX(-10px);     /* Décale légèrement le texte vers la gauche */
+  font-size: 80px;
+}
+
+.align-left-container {
+  text-align: left;                 /* Aligne tout le contenu à gauche */
+  margin-left: 0;                   /* Supprime toute marge gauche */
+  margin-right: auto;               /* Centre à droite automatiquement si possible */
+  width: 100%;                      /* Prend toute la largeur disponible */
+}
+
+.align-left-container .typewriter-container,
+.align-left-container .cd-headline {
+  text-align: left;                 /* Aligne le texte à gauche dans ces éléments */
+}
+
+.align-left-container .custom-btn {
+  display: inline-block;            /* Garde les boutons en ligne avec d'autres éléments */
+  margin-left: 0;                   /* Retire toute marge gauche du bouton */
+}
 
 /*---------------------------------------
-  RESPONSIVE STYLES               
+  RESPONSIVE STYLES
 -----------------------------------------*/
 /* Styles généraux pour les écrans larges (1600px et plus) */
 @media screen and (min-width: 1600px) {
@@ -1551,13 +1595,100 @@ strong {
   }
 
   .services-image-wrap {
-    width: 40%; /* Réduction à 60% pour écrans moyens */
+    width: 40%; /* Réduction à 40% pour écrans moyens */
     margin: auto; /* Centrer les images si nécessaire */
   }
+
+  .navbar-nav {
+    background-color: rgba(100, 100, 101, 0.712); /* Fond transparent mais opaque */
+    backdrop-filter: blur(5px); /* Si vous voulez un effet flou derrière le menu (optionnel) */
+  }
+
+  /* Styles pour le dropdown sur mobile */
+  .navbar-nav .dropdown-menu {
+    background-color: rgba(100, 100, 101, 0.904);
+    color: white; /* Texte blanc */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 100%; /* Placer juste en dessous du lien */
+    right: 0; /* Aligné à droite */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%); /* Commence à droite, caché */
+  }
+
+  .navbar-nav .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* L'élément glisse vers la gauche */
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item {
+    color: white; /* Texte des items en blanc */
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: var(--primary-color); /* Changer la couleur du fond au survol */
+    color: white;
+  }
+
+  /* Lien d'activation du dropdown */
+  .navbar-nav .dropdown-toggle {
+    color: var(--p-color);
+  }
+
 }
+
+/* Slogan qui défile */
+.normal-text {
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.cd-words-wrapper {
+  display: inline-block;            /* Maintient le comportement en ligne tout en permettant de transformer */
+  font-weight: bold;                /* Enlever le gras si nécessaire */
+  margin-left: 0%;                  /* Centre le texte */
+  transform: translateX(-10px);     /* Décale légèrement le texte vers la gauche */
+  font-size: 80px;
+}
+
+.align-left-container {
+  text-align: left;                 /* Aligne tout le contenu à gauche */
+  margin-left: 0;                   /* Supprime toute marge gauche */
+  margin-right: auto;               /* Centre à droite automatiquement si possible */
+  width: 100%;                      /* Prend toute la largeur disponible */
+}
+
+.align-left-container .typewriter-container,
+.align-left-container .cd-headline {
+  text-align: left;                 /* Aligne le texte à gauche dans ces éléments */
+}
+
+.align-left-container .custom-btn {
+  display: inline-block;            /* Garde les boutons en ligne avec d'autres éléments */
+  margin-left: 0;                   /* Retire toute marge gauche du bouton */
+}
+
 
 /* Styles pour les petits écrans (767px et moins) */
 @media screen and (max-width: 767px) {
+  /* Déplacement légèrement vers la droite */
+  .normal-text {
+    font-size: 18px; /* Taille du texte plus petite pour les petits écrans */
+    margin-left: 10px; /* Décale légèrement le texte vers la droite */
+  }
+
+  .cd-words-wrapper {
+    font-size: 50px; /* Taille du texte plus petite pour les petits écrans */
+    margin-left: 10px; /* Décale légèrement le texte vers la droite */
+  }
+
   .custom-btn {
     font-size: 14px;
     padding: 10px 20px;
@@ -1583,11 +1714,82 @@ strong {
     margin: auto;
   }
 
-  .navbar-nav{
+  .navbar-nav {
     background-color: rgba(100, 100, 101, 0.712); /* Fond transparent mais opaque */
     backdrop-filter: blur(5px); /* Si vous voulez un effet flou derrière le menu (optionnel) */
   }
-  
+
+  /* Styles pour le dropdown sur mobile */
+  .navbar-nav .dropdown-menu {
+    background-color: rgba(100, 100, 101, 0.904);
+    color: white; /* Texte blanc */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 100%; /* Placer juste en dessous du lien */
+    right: 0; /* Aligné à droite */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%); /* Commence à droite, caché */
+  }
+
+  .navbar-nav .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* L'élément glisse vers la gauche */
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item {
+    color: white; /* Texte des items en blanc */
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: var(--primary-color); /* Changer la couleur du fond au survol */
+    color: white;
+  }
+
+  /* Lien d'activation du dropdown */
+  .navbar-nav .dropdown-toggle {
+    color: var(--p-color);
+  }
+}
+
+/* Styles pour les très petits écrans (480px et moins) */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  .services-image-wrap {
+    width: 20%; /* Réduction à 20% pour très petits écrans */
+    margin: auto;
+  }
+
+  .navbar-nav {
+    background-color: rgba(100, 100, 101, 0.712); /* Fond transparent mais opaque */
+    backdrop-filter: blur(5px); /* Si vous voulez un effet flou derrière le menu (optionnel) */
+  }
+
   /* Styles pour le dropdown sur mobile */
   .navbar-nav .dropdown-menu {
     background-color: rgba(100, 100, 101, 0.904);
@@ -1628,33 +1830,6 @@ strong {
 }
 
 
-/* Styles pour les très petits écrans (480px et moins) */
-@media screen and (max-width: 480px) {
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 26px;
-  }
-
-  h4 {
-    font-size: 22px;
-  }
-
-  h5 {
-    font-size: 20px;
-  }
-
-  .services-image-wrap {
-    width: 20%; /* Réduction à 30% pour très petits écrans */
-    margin: auto;
-  }
-}
 
 
 .custom-btn.learnmore {
@@ -1715,3 +1890,128 @@ strong {
   background-position: center; /* Centrage de l'image */
   color: #fff; /* Couleur du texte */
 }
+
+/* Slogan qui défile
+.typewriter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Centrage vertical
+}
+
+.cd-words-wrapper.typewriter {
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap; 
+  vertical-align: top;
+}
+
+.cd-words-wrapper.typewriter::after {
+  display: inline-block;
+  animation: blink 0.7s step-end infinite; 
+  position: absolute;
+  top: 0;
+  left: 100%; 
+  font-size: inherit; 
+  line-height: inherit;
+  vertical-align: top;
+}*/
+
+/* Réalisations */
+
+.projects-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%;
+}
+
+.project-header {
+  padding: 20px;
+  background-color: #cccccc;
+  color: white;
+  text-align: center;
+}
+
+.project-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  margin: 10px 0 0;
+}
+
+.project-body {
+  padding: 20px;
+  font-size: 0.5rem;
+  color: #555;
+  flex-grow: 1;  /* Allows the content to expand and push the footer down */
+}
+
+.project-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.project-list li {
+  margin-bottom: 10px;
+}
+
+.action-title {
+  font-weight: bold;
+  color: #007bff;
+  font-size:1.2rem;
+}
+
+.project-footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-top: auto; /* Ensures it stays at the bottom of the card */
+}
+
+.project-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+
+
+
+

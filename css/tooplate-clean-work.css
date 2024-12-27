@@ -2241,6 +2241,10 @@ strong {
     display: none; /* Masque l'image de droite */
   }
 
+  .left-image {
+   padding-bottom: 200px; /* Masque l'image de droite */
+  }
+
   .header-title {
     font-size: 35px;
   }
@@ -2316,6 +2320,83 @@ strong {
   font-style: normal;
 }
 
+/* Défilement logos entreprises */
+
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  height: 200px; /* Adjust height as needed */
+  margin-top: 20px;
+  background: #ffffff; /* Optional background for contrast */
+  width: 100vw; /* Make the container span the full width of the screen */
+  left: 0; /* Ensure it starts at the edge of the screen */
+}
+
+.slide-track {
+  display: flex;
+  gap: 20px; /* Space between logos */
+  animation: scroll 30s linear infinite; /* Continuous scrolling */
+  width: max-content; /* Allow content to extend as needed */
+}
+
+.partners-container {
+  text-align: center;
+  flex-shrink: 0;
+  width: 200px; /* Adjust width to fit logos */
+}
+
+.partners-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.partner-name {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Keyframe Animation for infinite scroll */
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.partners-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.partner-item {
+  text-align: center;
+  margin: 0 15px;
+}
+
+/* Style for the floating contact button */
+.floating-contact-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4f83d1;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 1001;
+}
+
+.floating-contact-btn:hover {
+  background-color: #7cb8eb;
+  transform: scale(1.1);
+}
 
 
 

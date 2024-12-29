@@ -2229,7 +2229,6 @@ strong {
   transform: translateX(0) translateY(-50%);
 }
 
-
 /* Responsive Design */
 @media (max-width: 991px) {
   .right-image {

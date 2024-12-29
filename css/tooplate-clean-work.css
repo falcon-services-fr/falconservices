@@ -2220,15 +2220,12 @@ strong {
   transform: translateX(200%) translateY(-50%);
 }
 
-.realisation-header .left-image,
-.realisation-header .right-image {
-  transform: translateX(-100%) translateY(-50%);
-  transition: transform 0.6s ease-out;
-  will-change: transform;
+/* Hover effect sur la section */
+.realisation-header:hover .left-image {
+  transform: translateX(0) translateY(-50%);
 }
 
-.realisation-header.in-view .left-image,
-.realisation-header.in-view .right-image {
+.realisation-header:hover .right-image {
   transform: translateX(0) translateY(-50%);
 }
 

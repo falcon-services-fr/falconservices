@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector(".logo-slider");
     const track = document.querySelector(".slide-track");
     let isDragging = false;
-    let startX;
+    let startX, startTouchX;
     let scrollLeft;
     let autoScrollInterval;
 
@@ -27,31 +27,51 @@ document.addEventListener("DOMContentLoaded", () => {
         autoScrollInterval = null;
     }
 
-    // Gestion du glissement manuel
-    slider.addEventListener("mousedown", (e) => {
+    // Début d'interaction (souris ou tactile)
+    function startDragging(e) {
         isDragging = true;
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
         stopAutoScroll(); // Pause l'auto-scroll
-    });
 
-    slider.addEventListener("mouseup", () => {
-        isDragging = false; // Arrête le glissement
-        startAutoScroll(); // Reprend l'auto-scroll
-    });
+        if (e.type === "mousedown") {
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        } else if (e.type === "touchstart") {
+            startTouchX = e.touches[0].pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        }
+    }
 
-    slider.addEventListener("mousemove", (e) => {
-        if (!isDragging) return; // Ne défile que si le bouton est enfoncé
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2; // Ajustez la sensibilité
+    // Mouvement (souris ou tactile)
+    function drag(e) {
+        if (!isDragging) return;
+
+        let x;
+        if (e.type === "mousemove") {
+            x = e.pageX - slider.offsetLeft;
+        } else if (e.type === "touchmove") {
+            x = e.touches[0].pageX - slider.offsetLeft;
+        }
+
+        const walk = (x - (startX || startTouchX)) * 2; // Ajustez la sensibilité
         slider.scrollLeft = scrollLeft - walk;
-    });
+    }
 
-    slider.addEventListener("mouseleave", () => {
-        isDragging = false; // Assure que le glissement s'arrête si on quitte le slider
+    // Fin d'interaction (souris ou tactile)
+    function stopDragging() {
+        isDragging = false;
         startAutoScroll(); // Reprend l'auto-scroll
-    });
+    }
+
+    // Événements pour souris
+    slider.addEventListener("mousedown", startDragging);
+    slider.addEventListener("mousemove", drag);
+    slider.addEventListener("mouseup", stopDragging);
+    slider.addEventListener("mouseleave", stopDragging);
+
+    // Événements pour tactile
+    slider.addEventListener("touchstart", startDragging);
+    slider.addEventListener("touchmove", drag);
+    slider.addEventListener("touchend", stopDragging);
 
     // Duplication dynamique des logos pour l'effet infini
     const partners = document.querySelectorAll(".partners-container");

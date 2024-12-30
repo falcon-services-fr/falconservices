@@ -128,7 +128,7 @@ strong {
 
 
 /*---------------------------------------
-  SECTION               
+  SECTION      
 -----------------------------------------
 .section-padding {
   padding-top: 100px;
@@ -1159,13 +1159,11 @@ strong {
   width: 100%; /* S'étend sur toute la largeur */
 }
 
-.logo-slider:active {
-  cursor: grabbing; /* Changement de curseur quand l'utilisateur clique */
-}
+
 
 .slide-track {
   display: flex;
-  gap: 30px; /* Espace entre les logos */
+  gap: 10px; /* Espace entre les logos */
   transition: none; /* Supprime les transitions pour un glissement fluide */
 }
 
@@ -1193,10 +1191,6 @@ strong {
   color: #555;
 }
 
-.logo-slider::-webkit-scrollbar {
-  display: none; /* Masque la barre de défilement */
-}
-
 /* Ajustements pour rendre le glissement infini */
 @media screen and (max-width: 768px) {
   .logo-slider {
@@ -1212,11 +1206,6 @@ strong {
     font-size: 12px;
   }
 }
-
-
-
-
-
 
 /*---------------------------------------
   COUNTER NUMBERS              

@@ -1095,6 +1095,7 @@ strong {
 /*---------------------------------------
   PARTNERS              
 -----------------------------------------*/
+
 .partners-section {
   text-align: center;
   padding-top: 25px;
@@ -1119,10 +1120,54 @@ strong {
   transition: all 0.3s;
 }
 
-
 .partners-image:hover {
   transform: scale(1.05);
 }
+
+.logo-slider {
+  overflow: hidden;
+  width: 100vw; /* Étend le conteneur sur toute la largeur de l'écran */
+  position: relative;
+  margin: 20px auto;
+}
+
+.slide-track {
+  display: flex;
+  gap: 30px; /* Ajoute de l'espacement entre les logos */
+  animation: scrollInfinite 20s linear infinite; /* Animation fluide */
+}
+
+@keyframes scrollInfinite {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.partner-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555; /* Couleur neutre pour le texte */
+}
+
+@media (max-width: 768px) {
+  .slide-track {
+    animation: scrollInfinite 25s linear infinite; /* Ralentir légèrement sur mobile */
+  }
+
+  .partners-image {
+    width: 100px; /* Réduire légèrement la taille des logos */
+    height: 100px; /* Maintenir le ratio circulaire */
+  }
+
+  .partner-name {
+    font-size: 12px; /* Texte plus petit pour s'adapter à l'écran */
+  }
+}
+
+
 
 
 /*---------------------------------------

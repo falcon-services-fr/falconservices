@@ -1095,7 +1095,6 @@ strong {
 /*---------------------------------------
   PARTNERS              
 -----------------------------------------*/
-
 .partners-section {
   text-align: center;
   padding-top: 25px;
@@ -1111,61 +1110,70 @@ strong {
   padding: 10px 20px;
 }
 
-.partners-image {
-  display: block;
-  width: 150px;
-  height: 150px; /* Assurez-vous que la hauteur est égale à la largeur */
-  margin: auto;
-  border-radius: 50%; /* Rend l'image circulaire */
-  transition: all 0.3s;
-}
-
-.partners-image:hover {
-  transform: scale(1.05);
-}
-
 .logo-slider {
-  overflow: hidden;
-  width: 100vw; /* Étend le conteneur sur toute la largeur de l'écran */
+  overflow: hidden; /* Masque le contenu dépassant */
+  white-space: nowrap; /* Empêche les lignes de se casser */
+  display: flex;
   position: relative;
-  margin: 20px auto;
+  cursor: grab; /* Curseur de glissement */
+  width: 100%; /* S'étend sur toute la largeur */
+}
+
+.logo-slider:active {
+  cursor: grabbing; /* Changement de curseur quand l'utilisateur clique */
 }
 
 .slide-track {
   display: flex;
-  gap: 30px; /* Ajoute de l'espacement entre les logos */
-  animation: scrollInfinite 20s linear infinite; /* Animation fluide */
+  gap: 30px; /* Espace entre les logos */
+  transition: none; /* Supprime les transitions pour un glissement fluide */
 }
 
-@keyframes scrollInfinite {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+.partners-container {
+  text-align: center;
+  flex: 0 0 auto; /* Ne pas se rétrécir ou s'agrandir */
+}
+
+.partners-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Logos circulaires */
+  display: block;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.partners-image:hover {
+  transform: scale(1.1); /* Zoom sur le logo au survol */
 }
 
 .partner-name {
   margin-top: 10px;
   font-size: 14px;
-  color: #555; /* Couleur neutre pour le texte */
+  color: #555;
 }
 
-@media (max-width: 768px) {
-  .slide-track {
-    animation: scrollInfinite 25s linear infinite; /* Ralentir légèrement sur mobile */
+.logo-slider::-webkit-scrollbar {
+  display: none; /* Masque la barre de défilement */
+}
+
+/* Ajustements pour rendre le glissement infini */
+@media screen and (max-width: 768px) {
+  .logo-slider {
+    gap: 20px; /* Réduit l'espace entre les logos sur mobile */
   }
 
   .partners-image {
-    width: 100px; /* Réduire légèrement la taille des logos */
-    height: 100px; /* Maintenir le ratio circulaire */
+    width: 120px;
+    height: 120px;
   }
 
   .partner-name {
-    font-size: 12px; /* Texte plus petit pour s'adapter à l'écran */
+    font-size: 12px;
   }
 }
+
+
 
 
 

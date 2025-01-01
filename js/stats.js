@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.number');
-    const speed = 200; // Plus c'est bas, plus c'est lent
+    
+    // Vitesses personnalisées pour chaque compteur
+    const speeds = {
+        'slow-count': 100, // Vitesse lente
+        'fast-count': 40  // Vitesse rapide pour la dernière section
+    };
 
     const observerOptions = {
         root: null, // Par rapport à la fenêtre d'affichage
@@ -8,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const startCounter = (counter) => {
+        const className = counter.classList.contains('fast-count') ? 'fast-count' : 'slow-count';
+        const speed = speeds[className];
+
         const updateCount = () => {
             const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
@@ -16,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (count < target) {
                 counter.innerText = Math.ceil(count + inc);
-                setTimeout(updateCount, 120);
+                setTimeout(updateCount, className === 'fast-count' ? 30 : 60); // Délai ajusté
             } else {
                 counter.innerText = target;
             }

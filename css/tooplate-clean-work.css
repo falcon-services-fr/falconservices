@@ -2570,6 +2570,44 @@ strong {
   }
 }
 
+/*Animation pour le contenu*/
+
+/* Initial state */
+.advanced-fade-in {
+  opacity: 0;
+  transform: translateY(50px) scale(0.9) rotate(-5deg); /* Décalage, zoom réduit et rotation */
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Effet rebond */
+}
+
+/* State when visible */
+.advanced-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0); /* Position finale sans rotation */
+}
+
+/*-----------------*/
+
+/* Initial state */
+.service-card {
+  opacity: 0;
+  transform: translateY(50px) scale(0.9) rotate(-5deg); /* Décalage, zoom réduit et rotation */
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Effet rebond */
+}
+
+/* State when visible */
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0); /* Position finale sans rotation */
+}
+
+
+
+
+
+
+
+
+
 
 
 

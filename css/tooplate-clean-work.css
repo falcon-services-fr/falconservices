@@ -2424,6 +2424,14 @@ strong {
   transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+  .floating-contact-btn {
+    padding: 5px 10px; /* Réduction de la taille du padding */
+    font-size: 12px;  /* Réduction de la taille de la police */
+  }
+}
+
+
 /*Terre*/
 
 #globe-container {
@@ -2585,20 +2593,38 @@ strong {
   transform: translateY(0) scale(1) rotate(0); /* Position finale sans rotation */
 }
 
-/*-----------------*/
 
-/* Initial state */
-.service-card {
-  opacity: 0;
-  transform: translateY(50px) scale(0.9) rotate(-5deg); /* Décalage, zoom réduit et rotation */
-  transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Effet rebond */
+/*catégorie des réalisations :*/
+
+.section-content-wrapper {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding: 10px;
 }
 
-/* State when visible */
-.service-card.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1) rotate(0); /* Position finale sans rotation */
+.section-content {
+  display: none;
 }
+
+.toggle-button {
+  cursor: pointer;
+  color: blue;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  text-align: left;
+  padding: 5px;
+}
+
+/*drapeau langue*/
+
+.flag { 
+  width: 30px; 
+  height: 20px; 
+  margin-left: 10px; /* Adjust the value to control spacing */ 
+}
+
+
 
 
 

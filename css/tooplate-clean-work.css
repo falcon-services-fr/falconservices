@@ -2624,6 +2624,149 @@ strong {
   margin-left: 10px; /* Adjust the value to control spacing */ 
 }
 
+/*Présentation site web realisations*/
+
+/* Carte spécifique aux sites web */
+.site-web-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section de prévisualisation pour sites web */
+.site-web-preview {
+  width: 100%;
+  height: 250px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Iframe spécifique pour sites web */
+.site-web-iframe {
+  width: 100%;
+  height: 1000px; /* Taille plus grande que le conteneur pour l'effet de défilement */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 20s linear;
+}
+
+/* Défilement automatique */
+@keyframes scroll {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-750px); /* Hauteur totale moins le conteneur */
+  }
+}
+.site-web-iframe.scrolling {
+  animation: scroll 20s linear infinite;
+}
+
+/* Section pleine page */
+.site-web-full-page {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 50px 0;
+}
+
+.site-web-full-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Prévisualisation pleine largeur */
+.site-web-full-preview {
+  width: 100%;
+  height: 500px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.site-web-full-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Description */
+.site-web-description {
+  text-align: left;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.site-web-description h4 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.site-web-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.site-web-description ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.site-web-description ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Bouton */
+.btn-view-site {
+  display: inline-block;
+  background: linear-gradient(90deg, #0056b3, #007bff); /* Gradient effect */
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 25px; /* Fully rounded corners */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease; /* Smooth animation for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 2px solid transparent; /* Add a transparent border for hover effect */
+}
+
+/* Effet au survol */
+.btn-view-site:hover {
+  background: linear-gradient(90deg, #007bff, #0056b3); /* Reverse gradient */
+  color: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  transform: translateY(-2px); /* Slight "lift" effect */
+  border-color: #0056b3; /* Highlight the border */
+}
+
+/* Focus (pour l'accessibilité) */
+.btn-view-site:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.8); /* Glow effect for focus */
+}
+
 
 
 

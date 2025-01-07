@@ -1151,27 +1151,31 @@ strong {
 }
 
 .logo-slider {
-  overflow: hidden; /* Masque le contenu dépassant */
-  white-space: nowrap; /* Empêche les lignes de se casser */
-  display: flex;
+  overflow: hidden;
   position: relative;
-  cursor: grab; /* Curseur de glissement */
-  width: 100%; /* S'étend sur toute la largeur */
-  scroll-behavior: smooth; /* Rend le défilement fluide */
-}
-
-.logo-slider:active {
-  cursor: grabbing;
+  width: 100%;
+  height: 200px; /* Ajustez selon vos besoins */
 }
 
 .slide-track {
   display: flex;
-  gap: 15px; /* Espace entre les logos */
+  animation: scroll 20s linear infinite; /* Animation infinie */
 }
 
 .partners-container {
+  flex: 0 0 auto;
+  width: 150px; /* Largeur de chaque logo */
   text-align: center;
-  flex: 0 0 auto; /* Ne pas se rétrécir ou s'agrandir */
+  margin: 0 20px;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%); /* Commence à droite */
+  }
+  100% {
+      transform: translateX(0); /* Termine à gauche */
+  }
 }
 
 .partners-image {
@@ -1205,6 +1209,12 @@ strong {
 
   .partner-name {
     font-size: 12px;
+  }
+  .partners-container {
+    flex: 0 0 auto;
+    width: 120px; /* Largeur de chaque logo */
+    text-align: center;
+    margin: 0 20px;
   }
 }
 
@@ -2655,15 +2665,6 @@ strong {
   transition: transform 20s linear;
 }
 
-/* Défilement automatique */
-@keyframes scroll {
-  from {
-      transform: translateY(0);
-  }
-  to {
-      transform: translateY(-750px); /* Hauteur totale moins le conteneur */
-  }
-}
 .site-web-iframe.scrolling {
   animation: scroll 20s linear infinite;
 }

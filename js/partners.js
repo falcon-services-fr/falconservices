@@ -83,3 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Démarrer l'auto-scroll au chargement
     startAutoScroll();
 });
+
+
+

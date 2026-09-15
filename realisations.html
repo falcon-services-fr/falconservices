@@ -1,375 +1,539 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="">
-        <meta name="author" content="">
+<title>Réalisations — Études de cas | Falcon Services</title>
+<meta name="description" content="Prévision budgétaire, migration de données vers un ERP, automatisation de processus, suivi des flux logistiques, intégration comptable SAGE et développement web : nos projets livrés en détail.">
+<link rel="canonical" href="https://falconservices.fr/realisations">
 
-        <title>Réalisations | Falcon Services</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Falcon Services">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Réalisations — Études de cas | Falcon Services">
+<meta property="og:description" content="Migration ERP, automatisation de processus, flux logistiques, intégration SAGE, développement web : nos projets livrés en détail.">
+<meta property="og:url" content="https://falconservices.fr/realisations">
+<meta property="og:image" content="https://falconservices.fr/images/logo_fs.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#06070B">
 
-        <!-- CSS FILES nav-link active -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/logo_f.png">
+<link rel="preload" href="fonts/Metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Metropolis/Metropolis-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/falcon.css">
+</head>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+<div class="fx" aria-hidden="true">
+  <div class="fx__grid"></div>
+  <div class="fx__orb fx__orb--a"></div>
+  <div class="fx__orb fx__orb--b"></div>
+  <div class="fx__orb fx__orb--c"></div>
+  <div class="fx__noise"></div>
+</div>
 
-        <link href="css/tooplate-clean-work.css" rel="stylesheet">
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="Falcon Services — accueil">
+      <img src="images/logo_fs.png" alt="Falcon Services" width="760" height="272">
+    </a>
 
-        <link rel="icon" type="image/png" href="./images/logo_f.png">
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
 
-    </head>
-    
-    <body>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html#expertises">Expertises</a></li>
+        <li><a class="nav__link" href="sap-s4hana.html">SAP S/4HANA</a></li>
+        <li><a class="nav__link is-active" href="realisations.html">Réalisations</a></li>
+        <li class="nav__cta"><a class="btn btn--primary btn--sm" href="contact.html">Prendre rendez-vous</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-lg-12 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-house-fill me-2"></i>
-                            France
-                        </p>
+<main id="main">
 
-                        <p class="site-header-icon-wrap text-white d-flex mb-0 ms-auto">
-                            <i class="site-header-icon bi-whatsapp me-2"></i>
+  <!-- ========================================================== PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Réalisations</span>
+      </nav>
 
-                            <a href="tel: +33781293038" class="text-white">
-                                +33 7 81 29 30 38
-                            </a>
-                        </p>
-                    </div>
+      <h1 class="display page-hero__title">Études de cas.</h1>
 
-                </div>
+      <p class="lede page-hero__lede">
+        Le détail de ce que nous avons livré : le contexte, les actions, les résultats
+        et les technologies. Sans enjolivement.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ====================================================== ÉTUDES DE CAS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Data &amp; processus</span>
+        <h2 class="h2">Automatisation,<br><span>migration, fiabilisation.</span></h2>
+      </div>
+
+      <div class="studies">
+        <!-- Sephora -->
+        <article class="card study reveal" style="--accent: var(--yellow-bright)">
+          <div class="card__glow"></div>
+          <div class="study__head">
+            <img class="study__logo" src="images/partners/sephora_logo.jpg" alt="" loading="lazy">
+            <div>
+              <div class="study__client">Sephora</div>
+              <h3 class="study__title">Outil de prévision budgétaire 2026</h3>
             </div>
-        </header>
+          </div>
 
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index">
-                    <img src="images/logo_fs.png" class="logo img-fluid" alt="">
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index">Page d'accueil</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about">Qui sommes-nous ?</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="index#services-section">Nos Services</a>
-                        </li>
-
-                        <!-- CSS FILES     
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="about" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="about.html">Indentité de marque</a></li>
-
-                                <li><a class="dropdown-item" href="about.html">Analayse et traitement de données</a></li>
-
-                                <li><a class="dropdown-item" href="about.html">Développement web</a></li>
-
-                                <li><a class="dropdown-item" href="about.html">Développement mobile</a></li>
-                            </ul>
-                        </li>-->   
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="realisations">Réalisations</a>
-                        </li>
-
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="contact">Commencer !</a>
-                        </li>
-                    </ul>
-                </div>
+          <div class="study__cols">
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Actions réalisées
+              </h4>
+              <ul>
+                <li><strong>Cadrage du besoin&nbsp;:</strong> recueil des règles de construction budgétaire auprès des équipes finance et des porteurs de projets.</li>
+                <li><strong>Co-construction de l'outil&nbsp;:</strong> conception itérative avec les utilisateurs finaux, plutôt qu'une livraison clé en main.</li>
+                <li><strong>Consolidation du portefeuille&nbsp;:</strong> intégration de l'ensemble des projets groupe dans un modèle de prévision unique.</li>
+              </ul>
             </div>
-        </nav>
 
-        <main>
-
-            <section class="banner-section d-flex justify-content-center align-items-end">
-                <div class="section-overlay"></div>
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-7 col-12">
-                            <h1 class="text-white mb-lg-0">Nos dernières réalisations</h1>
-                        </div>
-
-                        <div class="col-lg-4 col-12 d-flex justify-content-lg-end align-items-center ms-auto">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="index">Accueil</a></li>
-
-                                    <li class="breadcrumb-item active" aria-current="page">Réalisations</li>
-                                </ol>
-                            </nav>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            
-            <section class="site-web-full-page">
-                <div class="container">
-                    <h2 class="section-title">Site Web : Aparburu Paysage</h2>
-                    <div class="site-web-full-preview">
-                        <!-- Iframe pour afficher le site -->
-                        <iframe 
-                            src="https://aparburupaysage.fr/index.html" 
-                            frameborder="0" 
-                            scrolling="yes" 
-                            class="site-web-full-iframe">
-                        </iframe>
-                    </div>
-                    <div class="site-web-description">
-                        <h4>Présentation</h4>
-                        <p>
-                            Le site vitrine <strong>Aparburu Paysage</strong> met en valeur les services de paysagisme 
-                            de l’entreprise avec un design moderne et une navigation optimisée. Il s'agit d'une 
-                            plateforme responsive offrant une expérience utilisateur fluide sur tous les appareils.
-                        </p>
-                        <h4>Points Clés</h4>
-                        <ul>
-                            <li><strong>Design Moderne :</strong> Interface claire et attrayante pour les visiteurs.</li>
-                            <li><strong>SEO :</strong> Optimisation pour un meilleur positionnement dans les moteurs de recherche.</li>
-                            <li><strong>Technologies :</strong> Développé en HTML, CSS, JavaScript avec Bootstrap pour une mise en page responsive.</li>
-                        </ul>
-                        <a href="https://aparburupaysage.fr/index.html" target="_blank" class="btn-view-site">
-                            Visiter le site
-                        </a>
-                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7283386686867136512" target="_blank" class="project-link">
-                            En savoir plus
-                            <img src="./images/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-                        </a>
-                    </div>
-                </div>
-            </section>
-            
-
-            <section class="projects-section section-padding">
-                <div class="container">
-                    <div class="projects-grid">
-
-                        <!-- Egis -->
-                        <div class="project-card">
-                            <div class="project-header">
-                                <img src="./images/partners/egis_logo.jpg" alt="Logo Egis" class="project-logo">
-                                <h3 class="project-title">Projet de migration de données vers un ERP</h3>
-                            </div>
-                            <div class="project-body">
-                                <h4 class="action-title">✅ Actions Réalisées</h4>
-                                <ul class="project-list">
-                                    <li><strong>Analyse des Besoins :</strong> Identification des exigences spécifiques du projet et des différentes sources de données à intégrer.</li>
-                                    <li><strong>Développement d'un Système :</strong> Mise en place d'un système pour collecter et vérifier les données nécessaires.</li>
-                                    <li><strong>Création d'Algorithmes :</strong> Transformation des données collectées en format cible pour Oracle.</li>
-                                </ul>
-                                <h4 class="action-title">🎯 Résultats Obtenus</h4>
-                                <ul class="project-list">
-                                    <li><strong>Intégrité des Données :</strong> Intégration sans erreur dans l'ERP.</li>
-                                    <li><strong>Efficacité :</strong> Réduction du temps et des efforts nécessaires pour gérer les données.</li>
-                                </ul>
-                                <h4 class="action-title">Technologies utilisées</h4>
-                                <ul class="project-list">
-                                    <li><strong>Langage de Programmation :</strong> VBA (Visual Basic for Applications)</li>
-                                    <li><strong>Système de Gestion de Base de Données (SGBD) :</strong> Oracle</li>
-                                    <li><strong>Environnement de Développement :</strong> Microsoft Excel</li>
-                                    <li><strong>Outils de Vérification des Données :</strong> Data Validation Toolkits</li>
-                                </ul>
-                                
-                            </div>
-                            <div class="project-footer">
-                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7254460043901702144" target="_blank" class="project-link">
-                                    En savoir plus
-                                    <img src="./images/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-                                </a>
-                            </div>
-                        </div>
-            
-                        <!-- Académie de Toulouse -->
-                        <div class="project-card">
-                            <div class="project-header">
-                                <img src="./images/partners/academie_de_toulouse_logo.jpg" alt="Logo Académie de Toulouse" class="project-logo">
-                                <h3 class="project-title">Création de Processus Automatisés</h3>
-                            </div>
-                            <div class="project-body">
-                                <h4 class="action-title">✅ Actions Réalisées</h4>
-                                <ul class="project-list">
-                                    <li><strong>Mise en place d’un processus automatisé :</strong> Insertion de logos sur des documents spécifiques.</li>
-                                    <li><strong>Développement d’un système de numérotation automatique :</strong> Synchronisation des numérotations des documents avec un répertoire Excel.</li>
-                                </ul>
-                                <h4 class="action-title">🎯 Résultats Obtenus</h4>
-                                <ul class="project-list">
-                                    <li><strong>Moins d’erreurs :</strong> Réduction des erreurs grâce à l'automatisation des tâches répétitives.</li>
-                                    <li><strong>Gain de temps :</strong> Augmentation de la productivité de l’équipe.</li>
-                                </ul>
-                                <h4 class="action-title">Technologies utilisées</h4>
-                                <ul class="project-list">
-                                    <li><strong>Langage de Programmation :</strong> VBA (Visual Basic for Applications)</li>
-                                    <li><strong>Environnement de Développement :</strong> Microsoft Excel</li>
-                                    <li><strong>Gestion de Projet :</strong> Jira, Confluence</li>
-                                    <li><strong>Gestion des Versions :</strong> Git, GitHub</li>
-                                    <li><strong>Outils de Collaboration :</strong> Microsoft Teams, SharePoint</li>
-                                </ul>
-                            </div>
-                            <div class="project-footer">
-                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7269272058688110592" target="_blank" class="project-link">
-                                    En savoir plus
-                                    <img src="./images/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-                                </a>
-                            </div>
-                        </div>
-            
-                        <!-- Comeback -->
-                        <div class="project-card">
-                            <div class="project-header">
-                                <img src="./images/partners/agence_comeback_logo.jpg" alt="Logo Comeback" class="project-logo">
-                                <h3 class="project-title">Suivi des Flux Logistiques</h3>
-                            </div>
-                            <div class="project-body">
-                                <h4 class="action-title">✅ Actions Réalisées</h4>
-                                <ul class="project-list">
-                                    <li><strong>Automatisation des coûts :</strong> Calcul automatique des coûts constituants du prix de vente.</li>
-                                    <li><strong>Analyse des coûts :</strong> Vérification croisée des données pour garantir leur cohérence.</li>
-                                </ul>
-                                <h4 class="action-title">🎯 Résultats Obtenus</h4>
-                                <ul class="project-list">
-                                    <li><strong>Gain de temps :</strong> Réduction du temps de traitement à 15 minutes.</li>
-                                    <li><strong>Précision accrue :</strong> Moins d’erreurs grâce à l'automatisation.</li>
-                                </ul>
-                                <h4 class="action-title">Technologies utilisées</h4>
-                                <ul class="project-list">
-                                    <li><strong>Langages de Programmation :</strong> VBA (Visual Basic for Applications), Python</li>
-                                    <li><strong>Environnement de Développement :</strong> Microsoft Excel</li>
-                                    <li><strong>Système de Gestion de Base de Données :</strong> Microsoft SQL Server</li>
-                                    <li><strong>Outils d'Analyse de Données :</strong> Excel</li>
-                                    <li><strong>Gestion de Projet :</strong> Jira, Confluence</li>
-                                    <li><strong>Outils de Collaboration :</strong> Microsoft Teams, SharePoint</li>
-                                </ul>
-                            </div>
-                            <div class="project-footer">
-                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7272852721118973952" target="_blank" class="project-link">
-                                    En savoir plus
-                                    <img src="./images/linkedin.png" alt="LinkedIn" class="linkedin-icon">
-                                </a>
-                            </div>
-                        </div>
-            
-                        <!-- Balenciaga -->
-                        <div class="project-card">
-                            <div class="project-header">
-                                <img src="./images/partners/balenciaga_logo.jpg" alt="Logo Balenciaga" class="project-logo">
-                                <h3 class="project-title">Automatisation des Données</h3>
-                            </div>
-                            <div class="project-body">
-                                <h4 class="action-title">✅ Actions Réalisées</h4>
-                                <ul class="project-list">
-                                    <li><strong>Analyse et Préparation :</strong> Identification des structures de fichiers.</li>
-                                    <li><strong>Développement des Macros :</strong> Création de processus pour transférer les données entre les fichiers Central et Europe.</li>
-                                </ul>
-                                <h4 class="action-title">🎯 Résultats Obtenus</h4>
-                                <ul class="project-list">
-                                    <li><strong>Gain de temps :</strong> Automatisation réduisant le temps de traitement.</li>
-                                    <li><strong>Précision accrue :</strong> Moins d’erreurs dans le transfert de données.</li>
-                                </ul>
-                                <h4 class="action-title">Technologies utilisées</h4>
-                                <ul class="project-list">
-                                    <li><strong>Langages de Programmation :</strong> VBA (Visual Basic for Applications), Python</li>
-                                    <li><strong>Environnement de Développement :</strong> Microsoft Excel, Visual Studio Code</li>
-                                    <li><strong>Système de Gestion de Base de Données :</strong> Microsoft SQL Server, MySQL</li>
-                                    <li><strong>Outils de Collaboration :</strong> Microsoft Teams, Slack</li>
-                                    <li><strong>Gestion de Projet :</strong> Trello</li>
-                                    <li><strong>Outils d'Automatisation :</strong> Power Automate, Zapier</li>
-                                    <li><strong>Outils de Reporting :</strong> Power BI, Tableau</li>
-                                </ul>                                
-                            </div>
-                        </div>
-            
-                        <!-- Dastri -->
-                        <div class="project-card">
-                            <div class="project-header">
-                                <img src="./images/partners/dastri_logo.jpg" alt="Logo Dastri" class="project-logo">
-                                <h3 class="project-title">Suivi des Stocks et comptabilité pour l'intégration dans SAGE</h3>
-                            </div>
-                            <div class="project-body">
-                                <h4 class="action-title">✅ Actions Réalisées</h4>
-                                <ul class="project-list">
-                                    <li><strong>Gestion du Fichier Excel :</strong> Gestion automatisée de la comptabilité et ajout des variables spécifiques pour une intégration dans SAGE (logiciel comptable).</li>
-                                    <li><strong>Tests et Vérifications :</strong> Test d'intégration pour garantir la précision des transferts.</li>
-                                </ul>
-                                <h4 class="action-title">🎯 Résultats Obtenus</h4>
-                                <ul class="project-list">
-                                    <li><strong>Gain de Temps :</strong> Réduction du temps alloué à la gesdtion et transfert comptable.</li>
-                                    <li><strong>Précision améliorée :</strong> Meilleure fiabilité dans le suivi de la comptabilité.</li>
-                                </ul>
-                                <h4 class="action-title">Technologies utilisées</h4>
-                                <ul class="project-list">
-                                    <li><strong>Langages de Programmation :</strong> VBA (Visual Basic for Applications), Python</li>
-                                    <li><strong>Environnement de Développement :</strong> Microsoft Excel, Visual Studio Code</li>
-                                    <li><strong>Système de Gestion de Base de Données :</strong> Microsoft SQL Server</li>
-                                    <li><strong>Logiciel Comptable :</strong> SAGE</li>
-                                    <li><strong>Outils de Collaboration :</strong> Microsoft Teams, SharePoint</li>
-                                    <li><strong>Outils de Reporting :</strong> Excel</li>
-                                </ul>                                
-                            </div>
-                        </div>
-                    </div>
-                </div>                  
-
-        </main>
-
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <!-- Bouton Je souhaite commencer -->
-                    <div class="col-12 text-center">
-                        <a href="contact" class="custom-btn mt-3">Je souhaite commencer</a>
-                    </div>
-        
-                    <!-- Liens Politique de Confidentialité et Mention Légale -->
-                    <div class="col-12 text-center mt-3">
-                        <div class="footer-links">
-                            <a href="politiqueconfidentialite" class="footer-link">Politique de Confidentialité</a> |
-                            <a href="mentionslegales" class="footer-link">Mention Légale</a>
-                        </div>
-                    </div>
-        
-                    <!-- Copyright -->
-                    <div class="col-12 text-center mt-3">
-                        <p class="copyright-text mb-0">Copyright © 2024 Falcon Services</p>
-                    </div>
-                </div>
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+                Résultats obtenus
+              </h4>
+              <ul>
+                <li><strong>Vision consolidée&nbsp;:</strong> une source unique pour la prévision budgétaire 2026 sur l'ensemble du portefeuille projets.</li>
+                <li><strong>Appropriation par les équipes&nbsp;:</strong> outil conçu avec ses utilisateurs, donc maintenu et fait évoluer en interne.</li>
+              </ul>
             </div>
-        </footer>
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.backstretch.min.js"></script>
-        <script src="js/counter.js"></script>
-        <script src="js/countdown.js"></script>
-        <script src="js/init.js"></script>
-        <script src="js/modernizr.js"></script>
-        <script src="js/animated-headline.js"></script>
-        <script src="js/custom.js"></script>
+            <div class="study__block study__tech">
+              <h4>Technologies</h4>
+              <div class="chip-row">
+                <span class="chip">Microsoft Excel</span><span class="chip">Power Query</span>
+                <span class="chip">Power BI</span>
+              </div>
+            </div>
+          </div>
+        </article>
 
-    </body>
+        <!-- Egis -->
+        <article class="card study reveal" style="--accent: var(--blue-bright)">
+          <div class="card__glow"></div>
+          <div class="study__head">
+            <img class="study__logo" src="images/partners/egis_logo.jpg" alt="" loading="lazy">
+            <div>
+              <div class="study__client">Egis</div>
+              <h3 class="study__title">Migration de données vers un ERP</h3>
+            </div>
+          </div>
+
+          <div class="study__cols">
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Actions réalisées
+              </h4>
+              <ul>
+                <li><strong>Analyse des besoins&nbsp;:</strong> identification des exigences spécifiques du projet et des différentes sources de données à intégrer.</li>
+                <li><strong>Développement d'un système&nbsp;:</strong> mise en place d'un système pour collecter et vérifier les données nécessaires.</li>
+                <li><strong>Création d'algorithmes&nbsp;:</strong> transformation des données collectées au format cible pour Oracle.</li>
+              </ul>
+            </div>
+
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+                Résultats obtenus
+              </h4>
+              <ul>
+                <li><strong>Intégrité des données&nbsp;:</strong> intégration sans erreur dans l'ERP.</li>
+                <li><strong>Efficacité&nbsp;:</strong> réduction du temps et des efforts nécessaires pour gérer les données.</li>
+              </ul>
+            </div>
+
+            <div class="study__block study__tech">
+              <h4>Technologies</h4>
+              <div class="chip-row">
+                <span class="chip">VBA</span><span class="chip">Oracle</span>
+                <span class="chip">Microsoft Excel</span><span class="chip">Data Validation Toolkits</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="study__foot">
+            <a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/feed/update/urn:li:activity:7254460043901702144" target="_blank" rel="noopener">En savoir plus sur LinkedIn</a>
+          </div>
+        </article>
+
+        <!-- Académie de Toulouse -->
+        <article class="card study reveal" style="--accent: var(--green-bright)">
+          <div class="card__glow"></div>
+          <div class="study__head">
+            <img class="study__logo" src="images/partners/academie_de_toulouse_logo.jpg" alt="" loading="lazy">
+            <div>
+              <div class="study__client">Académie de Toulouse</div>
+              <h3 class="study__title">Création de processus automatisés</h3>
+            </div>
+          </div>
+
+          <div class="study__cols">
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Actions réalisées
+              </h4>
+              <ul>
+                <li><strong>Mise en place d'un processus automatisé&nbsp;:</strong> insertion de logos sur des documents spécifiques.</li>
+                <li><strong>Numérotation automatique&nbsp;:</strong> synchronisation des numérotations des documents avec un répertoire Excel.</li>
+              </ul>
+            </div>
+
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+                Résultats obtenus
+              </h4>
+              <ul>
+                <li><strong>Moins d'erreurs&nbsp;:</strong> réduction des erreurs grâce à l'automatisation des tâches répétitives.</li>
+                <li><strong>Gain de temps&nbsp;:</strong> augmentation de la productivité de l'équipe.</li>
+              </ul>
+            </div>
+
+            <div class="study__block study__tech">
+              <h4>Technologies</h4>
+              <div class="chip-row">
+                <span class="chip">VBA</span><span class="chip">Microsoft Excel</span>
+                <span class="chip">Jira</span><span class="chip">Confluence</span>
+                <span class="chip">Git / GitHub</span><span class="chip">Microsoft Teams</span>
+                <span class="chip">SharePoint</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="study__foot">
+            <a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/feed/update/urn:li:activity:7269272058688110592" target="_blank" rel="noopener">En savoir plus sur LinkedIn</a>
+          </div>
+        </article>
+
+        <!-- Comeback -->
+        <article class="card study reveal" style="--accent: var(--yellow-bright)">
+          <div class="card__glow"></div>
+          <div class="study__head">
+            <img class="study__logo" src="images/partners/agence_comeback_logo.jpg" alt="" loading="lazy">
+            <div>
+              <div class="study__client">Agence Comeback</div>
+              <h3 class="study__title">Suivi des flux logistiques</h3>
+            </div>
+          </div>
+
+          <div class="study__cols">
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Actions réalisées
+              </h4>
+              <ul>
+                <li><strong>Automatisation des coûts&nbsp;:</strong> calcul automatique des coûts constituants du prix de vente.</li>
+                <li><strong>Analyse des coûts&nbsp;:</strong> vérification croisée des données pour garantir leur cohérence.</li>
+              </ul>
+            </div>
+
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+                Résultats obtenus
+              </h4>
+              <ul>
+                <li><strong>Gain de temps&nbsp;:</strong> réduction du temps de traitement à 15 minutes.</li>
+                <li><strong>Précision accrue&nbsp;:</strong> moins d'erreurs grâce à l'automatisation.</li>
+              </ul>
+            </div>
+
+            <div class="study__block study__tech">
+              <h4>Technologies</h4>
+              <div class="chip-row">
+                <span class="chip">VBA</span><span class="chip">Python</span>
+                <span class="chip">Microsoft Excel</span><span class="chip">Microsoft SQL Server</span>
+                <span class="chip">Jira</span><span class="chip">Confluence</span>
+                <span class="chip">Microsoft Teams</span><span class="chip">SharePoint</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="study__foot">
+            <a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/feed/update/urn:li:activity:7272852721118973952" target="_blank" rel="noopener">En savoir plus sur LinkedIn</a>
+          </div>
+        </article>
+
+        <!-- Balenciaga -->
+        <article class="card study reveal" style="--accent: var(--orange-bright)">
+          <div class="card__glow"></div>
+          <div class="study__head">
+            <img class="study__logo" src="images/partners/balenciaga_logo.jpg" alt="" loading="lazy">
+            <div>
+              <div class="study__client">Balenciaga</div>
+              <h3 class="study__title">Automatisation des données</h3>
+            </div>
+          </div>
+
+          <div class="study__cols">
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Actions réalisées
+              </h4>
+              <ul>
+                <li><strong>Analyse et préparation&nbsp;:</strong> identification des structures de fichiers.</li>
+                <li><strong>Développement des macros&nbsp;:</strong> création de processus pour transférer les données entre les fichiers Central et Europe.</li>
+              </ul>
+            </div>
+
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+                Résultats obtenus
+              </h4>
+              <ul>
+                <li><strong>Gain de temps&nbsp;:</strong> automatisation réduisant le temps de traitement.</li>
+                <li><strong>Précision accrue&nbsp;:</strong> moins d'erreurs dans le transfert de données.</li>
+              </ul>
+            </div>
+
+            <div class="study__block study__tech">
+              <h4>Technologies</h4>
+              <div class="chip-row">
+                <span class="chip">VBA</span><span class="chip">Python</span>
+                <span class="chip">Microsoft Excel</span><span class="chip">Visual Studio Code</span>
+                <span class="chip">Microsoft SQL Server</span><span class="chip">MySQL</span>
+                <span class="chip">Power Automate</span><span class="chip">Zapier</span>
+                <span class="chip">Power BI</span><span class="chip">Tableau</span>
+                <span class="chip">Trello</span><span class="chip">Slack</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dastri -->
+        <article class="card study reveal" style="--accent: var(--blue-bright)">
+          <div class="card__glow"></div>
+          <div class="study__head">
+            <img class="study__logo" src="images/partners/dastri_logo.jpg" alt="" loading="lazy">
+            <div>
+              <div class="study__client">Dastri</div>
+              <h3 class="study__title">Suivi des stocks et comptabilité pour intégration dans SAGE</h3>
+            </div>
+          </div>
+
+          <div class="study__cols">
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Actions réalisées
+              </h4>
+              <ul>
+                <li><strong>Gestion du fichier Excel&nbsp;:</strong> gestion automatisée de la comptabilité et ajout des variables spécifiques pour une intégration dans SAGE.</li>
+                <li><strong>Tests et vérifications&nbsp;:</strong> tests d'intégration pour garantir la précision des transferts.</li>
+              </ul>
+            </div>
+
+            <div class="study__block">
+              <h4>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+                Résultats obtenus
+              </h4>
+              <ul>
+                <li><strong>Gain de temps&nbsp;:</strong> réduction du temps alloué à la gestion et au transfert comptable.</li>
+                <li><strong>Précision améliorée&nbsp;:</strong> meilleure fiabilité dans le suivi de la comptabilité.</li>
+              </ul>
+            </div>
+
+            <div class="study__block study__tech">
+              <h4>Technologies</h4>
+              <div class="chip-row">
+                <span class="chip">VBA</span><span class="chip">Python</span>
+                <span class="chip">Microsoft Excel</span><span class="chip">Visual Studio Code</span>
+                <span class="chip">Microsoft SQL Server</span><span class="chip">SAGE</span>
+                <span class="chip">Microsoft Teams</span><span class="chip">SharePoint</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================== DÉVELOPPEMENT WEB -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Développement web</span>
+        <h2 class="h2">AP Arburu Paysage,<br><span>site vitrine.</span></h2>
+      </div>
+
+      <div class="site-preview reveal">
+        <div class="site-preview__bar" aria-hidden="true">
+          <i></i><i></i><i></i>
+          <span class="site-preview__url">aparburupaysage.fr</span>
+        </div>
+        <iframe src="https://aparburupaysage.fr/index.html"
+                title="Aperçu du site AP Arburu Paysage"
+                loading="lazy"
+                sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+
+      <div class="card study reveal" style="--accent: var(--orange-bright); margin-top:20px">
+        <div class="card__glow"></div>
+
+        <div class="study__head">
+          <img class="study__logo" src="images/partners/logo_arburu.png" alt="" loading="lazy">
+          <div>
+            <div class="study__client">AP Arburu Paysage</div>
+            <h3 class="study__title">Site vitrine responsive et optimisé SEO</h3>
+          </div>
+        </div>
+
+        <div class="study__cols">
+          <div class="study__block">
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              Présentation
+            </h4>
+            <ul>
+              <li>Le site vitrine met en valeur les services de paysagisme de l'entreprise avec un design moderne et une navigation optimisée.</li>
+              <li>Plateforme responsive offrant une expérience fluide sur tous les appareils.</li>
+            </ul>
+          </div>
+
+          <div class="study__block">
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+              Points clés
+            </h4>
+            <ul>
+              <li><strong>Design moderne&nbsp;:</strong> interface claire et attrayante pour les visiteurs.</li>
+              <li><strong>SEO&nbsp;:</strong> optimisation pour un meilleur positionnement dans les moteurs de recherche.</li>
+              <li><strong>Responsive&nbsp;:</strong> mise en page adaptée à tous les écrans.</li>
+            </ul>
+          </div>
+
+          <div class="study__block study__tech">
+            <h4>Technologies</h4>
+            <div class="chip-row">
+              <span class="chip">HTML</span><span class="chip">CSS</span>
+              <span class="chip">JavaScript</span><span class="chip">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="study__foot">
+          <a class="btn btn--ghost btn--sm" href="https://aparburupaysage.fr/index.html" target="_blank" rel="noopener">
+            Visiter le site
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/feed/update/urn:li:activity:7283386686867136512" target="_blank" rel="noopener">En savoir plus sur LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta reveal">
+        <h2 class="h2 cta__title">Votre projet<br>mérite le même soin.</h2>
+        <p class="lede cta__lede">
+          Décrivez-nous votre contexte. Nous vous dirons ce qui est faisable,
+          dans quel ordre et à quel coût.
+        </p>
+        <div class="cta__actions">
+          <a class="btn btn--primary btn--lg" href="contact.html">
+            Réserver un créneau
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="index.html#expertises">Voir nos expertises</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="images/logo_fs.png" alt="Falcon Services" width="760" height="272">
+        <p class="footer__tagline">
+          Conseil, transformation SAP S/4HANA, automatisation des données
+          et développement web. Votre gain de temps, notre mission.
+        </p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/company/falconservices-co/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="mailto:contact@falconservices.fr" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3>Expertises</h3>
+        <ul>
+          <li><a href="sap-s4hana.html">SAP S/4HANA</a></li>
+          <li><a href="index.html#expertises">Conseil &amp; stratégie</a></li>
+          <li><a href="index.html#expertises">Automatisation de données</a></li>
+          <li><a href="index.html#expertises">Développement web</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>SAP</h3>
+        <ul>
+          <li><a href="sap-s4hana.html#expertises-sap">Conseil &amp; cadrage</a></li>
+          <li><a href="sap-s4hana.html#trajectoires">Trajectoires de migration</a></li>
+          <li><a href="sap-s4hana.html#perimetre">Périmètre couvert</a></li>
+          <li><a href="sap-s4hana.html#expertises-sap">Run &amp; support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Entreprise</h3>
+        <ul>
+          <li><a href="about.html">Qui sommes-nous</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="tel:+33781293038">+33 7 81 29 30 38</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Falcon Services</span>
+      <nav class="footer__legal" aria-label="Liens légaux">
+        <a href="mentionslegales.html">Mentions légales</a>
+        <a href="politiqueconfidentialite.html">Politique de confidentialité</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/falcon.js" defer></script>
+</body>
 </html>
